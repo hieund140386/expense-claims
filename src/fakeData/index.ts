@@ -1,5 +1,6 @@
-export const ExpenseClaimsList = [
+export const expenseClaimsList = [
   {
+    id: 1,
     name: 'Thanh toán lần 1 Hợp đồng số AAV/2021/CS/PROG/17',
     date: '28/12/2021',
     claimant: 'Vũ Thị Huyền Sâm',
@@ -10,6 +11,7 @@ export const ExpenseClaimsList = [
     status: 'Approved',
   },
   {
+    id: 2,
     name: 'Chi phi kiem toan du an CFK Ngo Quyen',
     date: '28/12/2021',
     claimant: 'Phạm Khánh Toàn',
@@ -20,6 +22,7 @@ export const ExpenseClaimsList = [
     status: 'Inprogress',
   },
   {
+    id: 3,
     name: 'Giải thưởng cho tác giả đoạt giả cuộc thi "Những cống hiến thầm lặng"',
     date: '28/12/2021',
     claimant: 'Lê Phương Thảo',
@@ -30,6 +33,7 @@ export const ExpenseClaimsList = [
     status: 'Approved',
   },
   {
+    id: 4,
     name: 'Chi phi kiem toan du an CFK Binh Tan',
     date: '28/12/2021',
     claimant: 'Nguyễn Thanh Hà Linh',
@@ -40,6 +44,7 @@ export const ExpenseClaimsList = [
     status: 'Inprogress',
   },
   {
+    id: 5,
     name: 'Giải thưởng người truyền cảm hứng ActionAdi Việt Nam 2021',
     date: '28/12/2021',
     claimant: 'Hồ Thu Phương',
@@ -50,6 +55,7 @@ export const ExpenseClaimsList = [
     status: 'Approved',
   },
   {
+    id: 6,
     name: 'Thanh toán dịch vụ tư vấn cho Nguyễn Đức Hiếu',
     date: '28/12/2021',
     claimant: 'Lê Phương Thảo',
