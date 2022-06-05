@@ -1,5 +1,6 @@
-import { Table } from 'antd'
+import { Table, Tag } from 'antd'
 import type { ColumnsType } from 'antd/lib/table'
+import moment from 'moment'
 import { Link } from 'react-router-dom'
 import ExpenseClaimsListActions from '../../components/expense-claims-list/actions'
 import ExpenseClaimListHeader from '../../components/expense-claims-list/header'
@@ -20,6 +21,7 @@ const columns: ColumnsType<ExpenseClaimType> = [
     title: 'Date',
     dataIndex: 'date',
     key: 'date',
+    sorter: (record1, record2) => moment(record1.date).millisecond() - moment(record2.date).millisecond()
   },
   {
     title: 'Claimant',
@@ -50,6 +52,7 @@ const columns: ColumnsType<ExpenseClaimType> = [
     title: 'Status',
     dataIndex: 'status',
     key: 'status',
+    render: (text, record) => text === 'Approved' ? <Tag key={record.id} color='#87d068'>{text}</Tag> : text === 'Inprogress' ? <Tag key={record.id} color='#2db7f5'>{text}</Tag> : ''
   },
   {
     title: 'Actions',
@@ -66,7 +69,7 @@ const ExpenseClaimsList = () => {
     <Container>
       <ExpenseClaimListHeader />
       <ExpenseClaimsListActions />
-      <Table dataSource={expenseClaimsList} columns={columns} />
+      <Table dataSource={expenseClaimsList} columns={columns} pagination={false} />
     </Container>
   )
 }

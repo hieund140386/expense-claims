@@ -1,10 +1,9 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { PATH } from '../constants/routes'
-
-const ExpenseClaimsList = React.lazy(() => import('../pages/expense-claims'))
-const NewExpenseClaimAddition = React.lazy(() => import('../pages/expense-claims/new-addtion'))
-const ExpenseClaimDetail = React.lazy(() => import('../pages/expense-claims/details'))
+import ExpenseClaimsList from '../pages/expense-claims'
+import ExpenseClaimDetail from '../pages/expense-claims/details'
+import NewExpenseClaimAddition from '../pages/expense-claims/new-addtion'
 
 const Router:FC = () => {
   return (
